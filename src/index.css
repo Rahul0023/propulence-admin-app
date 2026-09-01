@@ -1,0 +1,103 @@
+@import './assets/fonts/propulence-sans.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Brand tokens sourced from propulence/src/styles.scss:539-606 (canonical navy/gold theme).
+ * --success/--warning have no source in that file — new additions, not sourced from the brand.
+ */
+:root {
+  --background: 220 20% 97%;
+  --foreground: 220 30% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 30% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 30% 10%;
+  --primary: 220 25% 12%;
+  --primary-foreground: 42 40% 90%;
+  --secondary: 42 30% 92%;
+  --secondary-foreground: 220 25% 12%;
+  --muted: 220 15% 94%;
+  --muted-foreground: 220 10% 45%;
+  --accent: 42 60% 50%;
+  --accent-foreground: 220 25% 8%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --success: 142 71% 35%;
+  --success-foreground: 0 0% 100%;
+  --warning: 38 92% 45%;
+  --warning-foreground: 0 0% 100%;
+  --border: 220 15% 90%;
+  --input: 220 15% 90%;
+  --ring: 42 60% 50%;
+  --gold: 42 60% 50%;
+  --gold-light: 42 50% 70%;
+  --gold-dark: 42 70% 35%;
+  --navy: 220 25% 12%;
+  --navy-light: 220 20% 20%;
+  --cream: 42 40% 96%;
+  --warm-white: 40 30% 98%;
+  --radius: 0.5rem;
+
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 220 25% 12%;
+  --sidebar-primary-foreground: 42 40% 90%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 42 60% 50%;
+}
+
+.dark {
+  --background: 220 25% 6%;
+  --foreground: 42 20% 92%;
+  --card: 220 25% 10%;
+  --card-foreground: 42 20% 92%;
+  --popover: 220 25% 10%;
+  --popover-foreground: 42 20% 92%;
+  --primary: 42 60% 50%;
+  --primary-foreground: 220 25% 8%;
+  --secondary: 220 20% 15%;
+  --secondary-foreground: 42 20% 90%;
+  --muted: 220 20% 15%;
+  --muted-foreground: 220 10% 55%;
+  --accent: 42 60% 50%;
+  --accent-foreground: 220 25% 8%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --success: 142 60% 45%;
+  --success-foreground: 220 25% 8%;
+  --warning: 38 92% 55%;
+  --warning-foreground: 220 25% 8%;
+  --border: 220 20% 18%;
+  --input: 220 20% 18%;
+  --ring: 42 60% 50%;
+
+  --sidebar-background: 220 28% 9%;
+  --sidebar-foreground: 42 20% 90%;
+  --sidebar-primary: 42 60% 50%;
+  --sidebar-primary-foreground: 220 25% 8%;
+  --sidebar-accent: 220 20% 15%;
+  --sidebar-accent-foreground: 42 20% 90%;
+  --sidebar-border: 220 20% 18%;
+  --sidebar-ring: 42 60% 50%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Propulence Sans', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
