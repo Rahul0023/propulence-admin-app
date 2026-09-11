@@ -20,7 +20,7 @@ function extractErrorMessage(error: unknown, fallback: string): string {
 export function usePinterestAccount() {
   return useQuery({
     queryKey: ['pinterest-accounts'],
-    queryFn: () => pinterestApi.listAccounts().then((r) => r.data[0] ?? null),
+    queryFn: () => pinterestApi.listAccounts().then((r) => r.data.results[0] ?? null),
   })
 }
 
@@ -69,7 +69,7 @@ export function useConnectPinterest() {
 export function usePinterestBoards() {
   return useQuery({
     queryKey: ['pinterest-boards'],
-    queryFn: () => pinterestApi.listBoards().then((r) => r.data),
+    queryFn: () => pinterestApi.listBoards().then((r) => r.data.results),
   })
 }
 

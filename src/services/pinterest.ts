@@ -1,4 +1,5 @@
 import { apiClient } from '@/lib/api-client'
+import type { PaginatedResponse } from '@/types/api'
 import type {
   PinterestAccount,
   PinterestBoard,
@@ -18,7 +19,7 @@ export const pinterestApi = {
 
   // ── Account (singleton — treat the list as "the first item or none") ───────
   listAccounts() {
-    return apiClient.get<PinterestAccount[]>(ACCOUNTS_BASE)
+    return apiClient.get<PaginatedResponse<PinterestAccount>>(ACCOUNTS_BASE)
   },
   updateAccount(
     id: number,
@@ -32,7 +33,7 @@ export const pinterestApi = {
 
   // ── Boards ───────────────────────────────────────────────────────────────────
   listBoards() {
-    return apiClient.get<PinterestBoard[]>(BOARDS_BASE)
+    return apiClient.get<PaginatedResponse<PinterestBoard>>(BOARDS_BASE)
   },
   createBoard(payload: PinterestBoardCreateRequest) {
     return apiClient.post<PinterestBoard>(BOARDS_BASE, payload)
