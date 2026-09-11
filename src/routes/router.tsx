@@ -40,6 +40,7 @@ const AgentApplicationsPage = lazy(() =>
 )
 const ProfilePage = lazy(() => import('@/features/profile/ProfilePage').then((m) => ({ default: m.ProfilePage })))
 const SettingsPage = lazy(() => import('@/features/settings/SettingsPage').then((m) => ({ default: m.SettingsPage })))
+const LinkedInPage = lazy(() => import('@/features/linkedin/LinkedInPage').then((m) => ({ default: m.LinkedInPage })))
 
 export const router = createBrowserRouter([
   { path: '/login', element: <LoginPage /> },
@@ -77,6 +78,7 @@ export const router = createBrowserRouter([
           { path: '/notifications', element: <NotificationsPage /> },
           { path: '/profile', element: <ProfilePage /> },
           { path: '/settings', element: <SettingsPage /> },
+          { path: '/linkedin', element: <LinkedInPage /> },
           {
             element: <RequireSuperAdminRole />,
             children: [

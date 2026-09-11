@@ -15,6 +15,7 @@ import {
   Newspaper,
   MessageSquare,
   UserCheck,
+  Linkedin,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -33,6 +34,7 @@ export const navItems: NavItem[] = [
   { label: 'Spotlight Projects', to: '/spotlight-projects', icon: Sparkles },
   { label: 'Hero Banners', to: '/hero-banners', icon: Image },
   { label: 'Blog', to: '/blog', icon: Newspaper },
+  { label: 'LinkedIn', to: '/linkedin', icon: Linkedin },
   { label: 'Developers', to: '/developers', icon: Landmark },
   { label: 'Business Profiles', to: '/business-profiles', icon: Contact },
   { label: 'Agent Applications', to: '/agent-applications', icon: UserCheck },
