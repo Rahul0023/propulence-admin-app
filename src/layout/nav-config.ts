@@ -16,6 +16,8 @@ import {
   MessageSquare,
   UserCheck,
   Linkedin,
+  Video,
+  Pin,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -35,6 +37,8 @@ export const navItems: NavItem[] = [
   { label: 'Hero Banners', to: '/hero-banners', icon: Image },
   { label: 'Blog', to: '/blog', icon: Newspaper },
   { label: 'LinkedIn', to: '/linkedin', icon: Linkedin },
+  { label: 'Pinterest Account', to: '/pinterest/account', icon: Pin },
+  { label: 'Pinterest Pins', to: '/pinterest/pins', icon: Video },
   { label: 'Developers', to: '/developers', icon: Landmark },
   { label: 'Business Profiles', to: '/business-profiles', icon: Contact },
   { label: 'Agent Applications', to: '/agent-applications', icon: UserCheck },

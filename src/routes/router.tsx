@@ -41,6 +41,12 @@ const AgentApplicationsPage = lazy(() =>
 const ProfilePage = lazy(() => import('@/features/profile/ProfilePage').then((m) => ({ default: m.ProfilePage })))
 const SettingsPage = lazy(() => import('@/features/settings/SettingsPage').then((m) => ({ default: m.SettingsPage })))
 const LinkedInPage = lazy(() => import('@/features/linkedin/LinkedInPage').then((m) => ({ default: m.LinkedInPage })))
+const PinterestAccountPage = lazy(() =>
+  import('@/features/pinterest/PinterestAccountPage').then((m) => ({ default: m.PinterestAccountPage })),
+)
+const PinterestPinsPage = lazy(() =>
+  import('@/features/pinterest/PinterestPinsPage').then((m) => ({ default: m.PinterestPinsPage })),
+)
 
 export const router = createBrowserRouter([
   { path: '/login', element: <LoginPage /> },
@@ -79,6 +85,8 @@ export const router = createBrowserRouter([
           { path: '/profile', element: <ProfilePage /> },
           { path: '/settings', element: <SettingsPage /> },
           { path: '/linkedin', element: <LinkedInPage /> },
+          { path: '/pinterest/account', element: <PinterestAccountPage /> },
+          { path: '/pinterest/pins', element: <PinterestPinsPage /> },
           {
             element: <RequireSuperAdminRole />,
             children: [
