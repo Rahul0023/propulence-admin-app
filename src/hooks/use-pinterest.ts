@@ -45,7 +45,7 @@ export function useUpdatePinterestAccount() {
 export function useDisconnectPinterestAccount() {
   const qc = useQueryClient()
   return useMutation({
-    mutationFn: (id: number) => pinterestApi.disconnectAccount(id),
+    mutationFn: () => pinterestApi.disconnectAccount(),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['pinterest-accounts'] })
       toast.success('Pinterest account disconnected')

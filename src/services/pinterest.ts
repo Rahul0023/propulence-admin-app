@@ -27,8 +27,10 @@ export const pinterestApi = {
   ) {
     return apiClient.patch<PinterestAccount>(`${ACCOUNTS_BASE}${id}/`, payload)
   },
-  disconnectAccount(id: number) {
-    return apiClient.post<PinterestAccount>(`${ACCOUNTS_BASE}${id}/disconnect/`)
+  // Collection-level action (detail=False on the backend) — operates on the
+  // singleton account, not a specific id, so it takes no argument.
+  disconnectAccount() {
+    return apiClient.post<PinterestAccount>(`${ACCOUNTS_BASE}disconnect/`)
   },
 
   // ── Boards ───────────────────────────────────────────────────────────────────

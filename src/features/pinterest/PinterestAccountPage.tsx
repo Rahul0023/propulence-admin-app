@@ -225,7 +225,7 @@ function AccountCard() {
         title="Disconnect Pinterest account?"
         description="Auto-publishing will stop immediately until reconnected."
         confirmLabel="Disconnect"
-        onConfirm={() => account && disconnect.mutate(account.id, { onSuccess: () => setConfirmDisconnect(false) })}
+        onConfirm={() => account && disconnect.mutate(undefined, { onSuccess: () => setConfirmDisconnect(false) })}
         isLoading={disconnect.isPending}
       />
 
